@@ -20,10 +20,26 @@ public class TheaterReservations {
         String lastName = names[names.length - 1];
 
         String[] dateParts = showDate.split("/");
+
         String month = dateParts[0];
         String day = dateParts[1];
         String year = dateParts[2];
+
         String formattedDate = year + "-" + month + "-" + day;
+        String ticketWord;
+
+        if (numberOfTickets == 1) {
+            ticketWord = "ticket";
+        } else {
+            ticketWord = "tickets";
+        }
+
+        System.out.println(numberOfTickets + " " + ticketWord +
+                " reserved for " + formattedDate +
+                " under " + lastName + ", " + firstName);
+
+
+
 
 
     }
